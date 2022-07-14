@@ -1,0 +1,146 @@
+body {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+body section {
+    scroll-snap-align: start;
+}
+
+img, picture {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
+
+.hero-area {
+    isolation: isolate;
+}
+
+.hero-area-bg {
+    height: 70%;
+    z-index: 0;
+    /* display: none; */
+}
+
+.hero-area-content {
+    z-index: 3;
+    inline-size: max-content;
+    top: 20%;
+    left: 14%
+}
+
+.section-heading .heading-art {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.section-heading .heading-art::before,
+.section-heading .heading-art::after {
+  content: "";
+  background-color: hsl(5, 100%, 30%);
+  display: inline-block;
+  height: 2px;
+  width: 100px;
+}
+
+footer .heading-art::before,
+footer .heading-art::after {
+  width: 50px !important;
+}
+
+.section-heading  .heading-art::before {
+  align-self: center;
+}
+
+.word-area::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    background-color: hsl(0, 100%, 99%);
+    inline-size: 65%;
+    block-size: 100%;
+    z-index: -100;
+}
+
+.program-imgs {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px 2.5px;
+    transition: transform .2s ease-in;
+}
+
+.program-imgs:hover {
+    transform: scale(1.01);
+}
+
+
+.program-imgs img:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    aspect-ratio: 1;
+    transform: scale(0.95);
+}
+
+.program-imgs img:nth-child(2),
+.program-imgs img:nth-child(3) {
+    grid-column: 2/-1;
+    aspect-ratio: 1;
+}
+
+.program-imgs img:nth-child(2) {
+    grid-row: 1/2;
+}
+
+.program-imgs img:nth-child(3) {
+    grid-row: 2/-1;
+}
+
+.gallery .img-wrapper {
+    position: relative;
+}
+
+.gallery .img-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0 0;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: hsla(5, 100%, 25%, 0.176);
+    transition: background-color .2s ease-in-out;
+}
+.gallery .img-wrapper:hover::after {
+    background-color: #800b0000;
+}
+
+.gallery img {
+    filter: blur(2px);
+    -webkit-filter: blur(1px);
+    transition: all .2s ease-in-out;
+}
+
+.gallery .img-wrapper:hover img {
+    filter: blur(0px);
+}
+
+
+.gallery .content {
+    opacity: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    inline-size: max-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.gallery .img-wrapper:hover .content {
+    opacity: 1;
+    transition: all .2s ease-in;
+}
