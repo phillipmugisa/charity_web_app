@@ -28,7 +28,8 @@
                 colors: {
                     primary: '#990C00',
                     primaryDark: '#800A00',
-                    accent: '#FFA199',
+                    accent: '#ff7366',
+                    accentDark: '#ff8a80',
                     lightAccent: '#FFFAFA',
                 }
             }
@@ -42,11 +43,11 @@
             <div class="content flex justify-evenly mx-auto px-10 py-5 w-12/12">
                 <div class="flex gap-4 logo-area">
                     <div class="h-20 w-20 bg-black">vempom</div>
-                    <div class="flex flex-column self-center w-6/12">
-                        <h1 class="text-xl font-bold text-white">Kasubi Nakulabye Skills Associations Limited</h1>
+                    <div class="flex flex-column self-center w-12/12">
+                        <h1 class="text-base md:text-xl font-bold text-white">Kasubi Nakulabye Skills Associations Limited</h1>
                     </div>
                 </div>
-                <div class="self-center">
+                <div class="hidden md:grid self-center">
                     <div class="flex flex-col gap-1 text-white">
                         <span class="flex items-center gap-3">
                             <i class="fa fa-phone"></i>
@@ -58,7 +59,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="self-center">
+                <div class="hidden md:grid self-center">
                     <div class="flex gap-1 text-white">
                         <span class="flex flex-col gap-1">
                             <span>Along Kasubi - Nabulagala road</span>
@@ -68,45 +69,63 @@
                 </div>
             </div>
         </div>
-        <nav class="sticky top-0 z-50 bg-lightAccent px-10 py-3">
-            <div class="container sticky flex items-center justify-between mx-auto">
+        <nav class="sticky top-0 z-50 bg-lightAccent px-5 md:px-10 py-3">
+            <div class="md:container sticky md:flex items-center justify-between mx-auto">
 
-                <div class="flex items-center space-x-2">
+                <div class="flex items-center space-x-2 justify-between w-12/12">
                     <a href="" class="flex text-primary hover:text-primaryDark hover:font-medium fw-900 font-semibold px-7 py-2">Home</a>
-                    <a href="" class="flex text-primary hover:text-primaryDark hover:font-medium fw-900 px-7 py-2">About Us</a>
-                    <a href="" class="flex text-primary hover:text-primaryDark hover:font-medium fw-900 px-7 py-2">Our Programs</a>
-                    <a href="" class="flex text-primary hover:text-primaryDark hover:font-medium fw-900 px-7 py-2">Contact Us</a>
+                    <a href="" class="hidden md:flex text-primary hover:text-primaryDark hover:font-medium fw-900 px-7 py-2">About Us</a>
+                    <a href="" class="hidden md:flex text-primary hover:text-primaryDark hover:font-medium fw-900 px-7 py-2">Our Programs</a>
+                    <a href="" class="hidden md:flex text-primary hover:text-primaryDark hover:font-medium fw-900 px-7 py-2">Contact Us</a>
+
+                    <a href="" class="flex md:hidden text-primary hover:text-primaryDark hover:font-medium fw-900 px-2 py-1 border border-solid border-primary rounded">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </div>
                 
-                <a href="" class="flex bg-primary text-white rounded-full fw-900 px-7 py-2 baseline hover:bg-primaryDark transition-all transition-200 ease-in">Apply Now</a>
+                <a href="" class="hidden md:flex bg-primary text-white rounded-full fw-900 px-7 py-2 baseline hover:bg-primaryDark transition-all transition-200 ease-in">Apply Now</a>
             </div>
         </nav>
 
         <!-- hero section -->
-        <section class="hero-area relative py-28 min-h-screen">
-            <div class="absolute inset-0 w-6/12 hero-area-bg bg-lightAccent"></div>
-            <div class="container absolute hero-area-content mx-auto px-6 grid gap-4">
-                <div class="grid gap-1">
-                    <h1 class="text-3xl font-bold text-black w-6/12">Equipping  the Young people with practical life skills</h1>
-                    <h1 class="text-xl text-gray-500 w-5/12">vocational training and offering psycho-social support</   h1>
+        <section class="hero-area relative min-h-screen">
+            <div class="container hero-area-content mx-auto">
+                <div class="grid gap-2 md:gap-1">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white md:text-black md:w-6/12">Equipping Young people with practical life skills</h1>
+                    <h1 class="text-lg text-gray-200 md:text-gray-500 md:w-5/12">Offering vocational training and psycho-social support</h1>
                 </div>
-                <div class="flex gap-3">
-                    <a href="" class="flex bg-primary text-white rounded-full fw-900 px-7 py-2 baseline transition-all transition-200 ease-in hover:bg-primaryDark ">Broswer Our Programs</a>
-                    <a href="" class="flex bg-accent transition-all transition-200 ease-in text-white rounded-full fw-900 px-7 py-2 transition-all baseline hover:bg-primaryDark ">Become A Well Wisher</a>
+                <div class="flex flex-wrap gap-3 items-start">
+                    <a href="" class="flex bg-primary text-white rounded-full fw-900 px-6 py-2 baseline transition-all transition-200 ease-in hover:bg-primaryDark ">Broswer Our Programs</a>
+                    <a href="" class="flex bg-accent transition-all transition-200 ease-in text-white rounded-full fw-900 px-7 py-2 transition-all baseline hover:bg-accentDark ">Become A Well Wisher</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <div class="cut-out-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <img src="https://images.pexels.com/photos/3186386/pexels-photo-3186386.jpeg?auto=compress&cs=tinysrgb&w=600" alt="hero image">
+                <div class="cut-out-bottom">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </section>
 
         <!-- about us -->
-        <section class="container grid gap-10 mx-auto grid justify-center content-start gap-3 px-5 py-5 min-h-screen">
+        <section class="container grid gap-10 mx-auto grid justify-center content-start gap-2 md:gap-3 px-5 py-5 min-h-screen">
             <div class="grid section-heading gap-2 justify-items-center mx-auto p-5">
-                <h2 class="text-2xl text-primary font-semibold capitalize">About Us</h2>
+                <h2 class="text-lg md:text-2xl text-primary font-semibold capitalize">About Us</h2>
                 <div class="heading-art">
                     <span class="w-3 h-3 rounded-full bg-primary"></span>
                 </div>
             </div>
-            <div class="container grid grid-cols-3 justify-evenly gap-10">
-                <div class="grid justify-items-center gap-2 py-10 px-5 bg-lightAccent rounded-2xl">
+            <div class="container grid grid-cols-1 md:grid-cols-3 justify-evenly gap-10">
+                <div class="grid justify-items-center md:gap-2 py-10 px-5 bg-lightAccent rounded-2xl">
                     <h3 class="text-lg font-semibold text-black">
                         Our Vision
                     </h3>
@@ -127,11 +146,11 @@
             </div>
 
             <!-- word for Executive Manager -->
-            <div class="flex word-area relative items-center p-10 gap-10">
-                <div class="img-wrapper w-5/12 aspect-square">
+            <div class="grid md:flex word-area relative items-center p-10 gap-10">
+                <div class="img-wrapper w-12/12 md:w-5/12 aspect-square">
                     <img class="w-12/12 aspect-square" src="https://media.istockphoto.com/photos/headshot-of-a-happy-young-pregnant-woman-in-all-her-beauty-picture-id1281103760?b=1&k=20&m=1281103760&s=170667a&w=0&h=LXz3WLmiPH-Fct-eSHmnhF680O-Mfwv-M7hu1lBqX8M=" alt="Executive Manager">
                 </div>
-                <div class="grid gap-4 w-6/12">
+                <div class="grid gap-4 w-12/12 md:w-6/12">
                     <h3 class="text-lg font-semibold">Word from Executive Manager</h3>
                     <p class="text-gray-700 text-base">
                         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
@@ -157,12 +176,12 @@
         <section class="container grid justify-items-center items-start mx-auto px-5 py-5">
             <div class="grid justify-center content-start gap-3 ">
                 <div class="grid section-heading gap-2 justify-items-center mx-auto p-5">
-                    <h2 class="text-2xl text-primary font-semibold capitalize">Our Programs</h2>
+                    <h2 class="text-lg md:text-2xl text-primary font-semibold capitalize">Our Programs</h2>
                     <div class="heading-art">
                         <span class="w-3 h-3 rounded-full bg-primary"></span>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-10 justify-items-evenly">
+                <div class="grid md:grid-cols-2 gap-10 justify-items-evenly">
                     <div class="programs-grid border-2 border-solid border-lightAccent p-5 rounded-lg hover:bg-lightAccent transition-colors transition-200 ease-in">
                         <a href="" class="programs-grid grid gap-5 text-center">
                             <div class="program-imgs">
@@ -189,18 +208,18 @@
                     </div>
                 </div>
             </div>
-            <a href="" class="flex items-center bg-primary text-white rounded-full fw-900 gap-0 px-5 py-3 baseline transition-all transition-200 ease-in hover:bg-primaryDark ">View All Programs</a>
+            <a href="" class="flex items-center bg-primary text-white rounded-full fw-900 gap-0 px-4 py-2 md:px-5 md:py-3 baseline transition-all transition-200 ease-in hover:bg-primaryDark ">View All Programs</a>
         </section>
 
         <!-- Gallery -->
         <section class="grid gap-10 mx-auto grid justify-center content-start gap-3 px-5 py-5 min-h-screen">
             <div class="grid section-heading gap-2 justify-items-center mx-auto p-5">
-                <h2 class="text-2xl text-primary font-semibold capitalize">Gallery</h2>
+                <h2 class="text-lg md:text-2xl text-primary font-semibold capitalize">Gallery</h2>
                 <div class="heading-art">
                     <span class="w-3 h-3 rounded-full bg-primary"></span>
                 </div>
             </div>
-            <div class="gallery grid gap-1 grid-cols-2">
+            <div class="gallery grid gap-1 md:grid-cols-2">
                 <div class="left">
                     <div class="img-wrapper grid">
                         <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBzdHVkZW50c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" class="aspect-square">
@@ -240,7 +259,7 @@
 
         <!-- footer -->
         <footer class="mt-10 grid bg-lightAccent">
-            <div class="container grid grid-cols-3 justify-evenly py-10 mx-auto text-center">
+            <div class="container grid md:grid-cols-3 justify-evenly py-10 mx-auto text-center gap-5">
                 <div class="flex gap-2 flex-col p-3 items-center">
                     <div class="grid section-heading gap-2 justify-items-center mx-auto">
                         <h2 class="text-lg text-primary font-semibold capitalize">About Us</h2>
@@ -263,7 +282,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="flex gap-2 flex-col p-3 align-start">
+                <div class="hidden md:flex gap-2 flex-col p-3 align-start">
                     <div class="grid section-heading gap-2 justify-items-center items-start mx-auto">
                         <h2 class="text-lg text-primary font-semibold capitalize">Links</h2>
                         <div class="heading-art">
@@ -299,7 +318,7 @@
                 </div>
                 <div class="flex gap-2 flex-col p-3 items-center">
                     <div class="grid section-heading gap-2 justify-items-center items-start mx-auto">
-                        <h2 class="text-lg text-primary font-semibold capitalize">About Us</h2>
+                        <h2 class="text-lg text-primary font-semibold capitalize">Our Socials</h2>
                         <div class="heading-art">
                             <span class="w-3 h-3 rounded-full bg-primary"></span>
                         </div>
@@ -322,7 +341,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid justify-center bg-primary text-white py-5">
+            <div class="grid justify-center bg-primary text-white py-5 px-10 text-center">
                 <p>
                     Copyright &copy; <script>document.write(new Date().getFullYear())</script>, All rights reserved. Property of knsa.org
                 </p>
