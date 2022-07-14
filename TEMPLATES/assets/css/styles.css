@@ -126,7 +126,7 @@ img, picture {
         grid-column: 1/-1;
         grid-row: 1/-1;
         object-fit: cover;
-        block-size: 500px;
+        block-size: 100vh;
         inline-size: 100%;
         position: relative;
         z-index: 1;
